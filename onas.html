@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krakus</title>
+    <link rel="stylesheet" href="moje_style.css">
+    <link rel="icon" href="last2.png" type="image/x-icon">
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('nav a');
+
+            links.forEach(link => {
+                const underline = document.createElement('span');
+                link.appendChild(underline); 
+
+                link.addEventListener('mouseover', () => {
+                    underline.style.width = '100%';  
+                });
+
+                link.addEventListener('mouseout', () => {
+                    underline.style.width = '0';  
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+    	<img src="last2.png" style="width: 10%; height: auto; margin: 0; padding: 0;" alt="Opis obrazka">
+    <h1 style="margin: 0; padding: 0;">Krakus</h1>
+    </header>
+
+    <nav>
+        <a href="onas.html" class="aktywna">O nas</a>
+        <a href="rekrutacja.html">Rekrutacja</a>
+        <a href="wyjazdy.html">Wyjazdy zagraniczne</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <main>
+        <section id="OZespole" class="content">
+            <h2>O zespole</h2>
+            <p>
+            Krakus jest najstarszym studenckim zespołem folklorystycznym w Polsce. Został założony przez Wiesława Białowąsa przy Akademii Górniczo-Hutniczej w Krakowie w 1949 roku. Zespół prezentuje oryginalny polski folklor ludowy, przetworzony i przystosowany artystycznie do wymogów sceny. Pieśni, tańce i obrzędy przedstawione w suitach: krakowskiej, śląskiej, rzeszowskiej, łowickiej, sądeckiej, lubelskiej, kieleckiej, żywieckiej i beskidzkiej, barwnie i żywo opisują urodę oraz rozmaitość tych regionów. Pokazują jednocześnie kunszt, autentyzm i piękno polskiego stroju ludowego.
+        	</p>
+       		 <p>
+            Krakus gromadzi w swoich szeregach studentów AGH oraz innych krakowskich uczelni, którzy w trzech sekcjach: tanecznej, wokalno-tanecznej i kapeli rozwijają swój talent i zamiłowanie do tańca, śpiewu i muzyki ludowej. Zespół w ciągu 75 lat działalności koncertował w kraju i za granicą ponad 4700 razy. Jego występy gorąco oklaskiwano prawie we wszystkich krajach Europy oraz w Azji, Afryce, Ameryce Północnej i Południowej. Odbył w tym czasie ponad 190 zagranicznych wojaży artystycznych. Zdobył wiele nagród i wyróżnień na krajowych i międzynarodowych festiwalach.
+       		</p>
+        	<p>
+            Autorzy zmieniającego się programu scenicznego Zespołu to znakomici choreografowie: M.Wieczysty, Z.Pieńkowski, I.Kik, B.Niżańska, J.Kozłowska, W.Koźbiał, J.Kwaśniewski, Z. Marcinek i muzycy: L.Wiśniowski, J.Brodka, J.Kaźmierczak, A. Romański, A.Szopa. Kierownictwo w Zespole sprawowali: Wiesław Białowąs (1949-1974) oraz Stanisław Rusinek (1974-1999).
+        	</p>
+       		<p>
+            Od 1980 roku działa w „Krakusie” grupa dziecięca licząca 80 osób w wieku 7-15 lat. Realizuje odrębny program. Dzieci występują samodzielnie lub z Zespołem studenckim prezentując z dużym powodzeniem swoje umiejętności w kraju i za granicą.
+        	</p>
+        </section>
+            <img src="miraz.jpg" alt="Zdjęcie zespołu"">
+
+
+        <section id="Oferta" class="content">
+            <h2>Oferta</h2>
+        	<p>
+            Zespół prezentuje polski folklor, melodie, tańce, piosenki z różnych regionów Polski opracowane w formie suit. 
+            W repertuarze „Krakusa” możemy znaleźć następujące suity:
+       		</p>
+        	<ul>
+            	<li>krakowską</li>
+            	<li>lubelską</li>
+            	<li>rzeszowską</li>
+            	<li>sądecką</li>
+            	<li>beskidzką</li>
+            	<li>śląską</li>
+           		<li>łowicką</li>
+        	</ul>
+        	<p>
+            Każda z nich jest prezentowana w pięknych strojach wykonanych przez profesjonalne firmy 
+            (można je obejrzeć w naszej galerii internetowej lub osobiście w siedzibie Zespołu). 
+            W ofercie znajdują się również tańce narodowe – <span class="highlight">polonez</span> i <span class="highlight">mazur</span> przedstawiane w strojach szlacheckich, 
+            jak również tańce wielkopolskie.
+        	</p>
+        	<p>
+            Czas trwania jednej suity to około 20 minut. Na scenie jednocześnie, w zależności od warunków technicznych, 
+            występuje ok. 30 – 40 osób (balet, chór, kapela).
+        	</p>
+        	<p>„Krakus” może prezentować się również w wersji kameralnej:</p>
+        	<ul>
+            	<li>jedna lub dwie pary baletowe, solista (wokal), kapela</li>
+            	<li>solista, kapela</li>
+            	<li>chór, kapela</li>
+            	<li>chór a’capella</li>
+            	<li>lajkonik, kapela</li>
+        	</ul>
+        	<p>
+            Zespół w zależności od warunków scenicznych może zaproponować program, który spełni oczekiwania widzów.
+        	</p>
+        </section>
+        <img src="zima2.JPEG" alt="Zdjęcie zespołu"">
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; Krakus. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
