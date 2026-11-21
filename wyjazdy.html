@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krakus</title>
+    <link rel="stylesheet" href="moje_style.css">
+    <link rel="icon" href="last2.png" type="image/x-icon">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('nav a');
+
+            links.forEach(link => {
+                const underline = document.createElement('span');
+                link.appendChild(underline); 
+
+                link.addEventListener('mouseover', () => {
+                    underline.style.width = '100%';  
+                });
+
+                link.addEventListener('mouseout', () => {
+                    underline.style.width = '0';  
+                });
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    $('table img').hover(
+        function() {
+            $(this).css({
+                transform: 'scale(1.3)', 
+                transition: 'transform 0.3s ease' 
+            });
+        }, 
+        function() {
+            $(this).css({
+                transform: 'scale(1)', 
+                transition: 'transform 0.3s ease'
+            });
+        }
+    );
+	});
+	</script>
+</head>
+
+<body>
+    <header>
+    	<img src="last2.png" style="width: 10%; height: auto; margin: 0; padding: 0;" alt="Opis obrazka">
+    <h1 style="margin: 0; padding: 0;">Krakus</h1>
+    </header>
+
+    <nav>
+        <a href="onas.html">O nas</a>
+        <a href="rekrutacja.html">Rekrutacja</a>
+        <a href="wyjazdy.html" class="aktywna">Wyjazdy zagraniczne</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <main>
+        
+		<section class="content">
+        <h2>Wyjazdy Zagraniczne</h2>
+        <p>Zespół w ciągu 74 lat działalności koncertował w kraju i za granicą ponad 4700 razy. Jego występy gorąco oklaskiwano prawie we wszystkich krajach Europy oraz w Azji, Afryce, Ameryce Północnej i Południowej.
+			Odbył w tym czasie ponad 190 zagranicznych wojaży artystycznych. Zdobył wiele nagród i wyróżnień na krajowych i międzynarodowych festiwalach.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Lokalizacja</th>
+                    <th>Data</th>
+                    <th>Opis</th>
+                    <th>Zdjęcie</th>
+                </tr>
+            </thead>
+            <tbody>
+            	<tr>
+                    <th colspan=4 style="text-align:center">2024</th>
+                </tr>
+                <tr>
+                    <td>Timisoara, Rumunia</td>
+                    <td>Lipiec 2024</td>
+                    <td>W lipcu Zespół Pieśni i Tańca Krakus odwiedził Timisoarę w Rumunii, biorąc udział w renomowanym Festiwalu Inimilor. Podczas występów zaprezentowali niezwykle energetyczną suitę rzeszowską oraz pełną wdzięku suitę krakowską, zachwycając publiczność różnorodnością polskich tradycji. Wyjazd był wyjątkową okazją do promocji polskiego folkloru na międzynarodowej scenie.</td>
+                    <td><img src="Rumunia1.JPEG" alt="Zdjęcie z Rumunii"></td>
+                </tr>
+                <tr>
+                    <td>Agrigento, Włochy</td>
+                    <td>Marzec 2024</td>
+                    <td>Wyjazd „Krakusa” na festiwal Mandorlo in Fiore był niezapomnianym doświadczeniem pełnym wrażeń kulturalnych. Podczas festiwalu uczestnicy mieli okazję wziąć udział w koncertach i szerzyć polskie tradycje, sztukę i folklor, a także poznawać bogactwo tej malowniczej włoskiej wyspy – historyczne, kulturowe, kulinarne. Mimo tego, że festiwalowy czas był bardzo intensywny i niesamowicie męczący, atmosfera panująca podczas jego trwania była bardzo energetyczna i inspirująca, pozostawiając w sercach jego uczestników, niezatarte wspomnienia, do których wracają do dziś.</td>
+                    <td><img src="włochy.jpg" alt="Zdjęcie z Włoch"></td>
+                </tr>
+                <tr>
+                    <th colspan=4 style="text-align:center">2023</th>
+                </tr>
+                <tr>
+                    <td>Pisek, Czechy</td>
+                    <td>Sierpień 2023</td>
+                    <td>Pod koniec sierpnia 2023 Zespół Pieśni i Tańca AGH „Krakus” odwiedził czeskie miasto Pisek, uczestnicząc w XXVIII International Folklore Festival. Podczas występów zaprezentował m.in. suitę sądecką i krakowską, zdobywając uznanie publiczności. Poza koncertami zespół zwiedzał zabytki miasta, uczestniczył w paradzie i gościł na zamku w Orliku, gdzie występ oglądała książęca para Schwarzenbergów.</td>
+                    <td><img src="czechy.jpg" alt="Zdjęcie z Czech"></td>
+                </tr>
+                <tr>
+                    <td>Meksyk</td>
+                    <td>Lipiec/Sierpień 2023</td>
+                    <td>W lipcu i sierpniu 2023 Zespół Pieśni i Tańca AGH „Krakus” odbył wyjątkową podróż do Meksyku, występując na dwóch festiwalach folklorystycznych w stanach Zacatecas i Guanajuato. Zespół zaprezentował piękno polskiego folkloru, wykonując m.in. suity krakowską i śląską, a także śpiewając „Cielito Lindo” wspólnie z publicznością. Oprócz koncertów artyści zwiedzali historyczne miasta, poznawali lokalne tradycje i smakowali kuchnię meksykańską, zapisując tę przygodę na długo w pamięci.</td>
+                    <td><img src="meksyk.jpg" alt="Zdjęcie z Meksyku"></td>
+                </tr>
+                <tr>
+                    <td>Chorwacja, Serbia</td>
+                    <td>Lipiec 2023</td>
+                    <td>Dwutygodniowa bałkańska przygoda z festiwalami folklorystycznymi w Chorwacji i Serbii, zwiedzaniem trzech europejskich stolic oraz licznymi integracjami, koncertami i eksploracjami lokalnych tradycji była niezapomnianym doświadczeniem. Bogactwo wspomnień, miejsc, smaków i wspólnego śpiewu na długo pozostanie w naszych sercach, podkreślając wyjątkowość ludzi, którzy stworzyli tę pełną barw mozaikę wspólnych przeżyć.</td>
+                    <td><img src="serbia.jpg" alt="Zdjęcie z Serbii"></td>
+                </tr>
+                <tr>
+                    <th colspan=4 style="text-align:center">2021</th>
+                </tr>
+                <tr>
+                    <td>Tbilisi, Gruzja</td>
+                    <td>Lipiec 2021</td>
+                    <td>Podczas podróży do Gruzji w ramach festiwalu „The Country of Legends” mieliśmy okazję odkrywać gościnność mieszkańców, którzy częstowali nas winem i opowieściami, a także prezentować polski folklor w towarzystwie zespołów z Ukrainy i Turcji. Zwiedziliśmy m.in. Kutaisi, Martvili i Tbilisi, podziwiając lokalne zabytki i krajobrazy, a wieczorami integrowaliśmy się podczas międzynarodowych biesiad. Wyjazd pełen piękna, tradycji i niezapomnianych spotkań utwierdził nas w przekonaniu, że Gruzini są mistrzami gościnności.</td>
+                    <td><img src="gruzja.jpg" alt="Zdjęcie z Gruzji"></td>
+                </tr>
+                <tr>
+                    <th colspan=4 style="text-align:center">2019</th>
+                </tr>
+                <tr>
+                    <td>Manila, Filipiny</td>
+                    <td>Grudzień 2019</td>
+                    <td>W 2019 roku zespół Krakus wziął udział w 16. Fiesta Folkloriada na Filipinach, po intensywnych przygotowaniach do 70-lecia zespołu i wcześniejszych podróżach na Ukrainę i Łotwę. Po ekscytującym locie przez Dubaj, gdzie przeżyli przygodę z zagubionym paszportem, dotarli na Cebu, gdzie spędzili czas na nurkowaniu z rekinami wielorybimi i zwiedzaniu rajskich wysp. Kolejnym etapem była Manila, gdzie zespół wystąpił na festiwalu, ciesząc się nie tylko występami, ale również luksusowymi warunkami pobytu w centrum miasta.</td>
+                    <td><img src="filipiny.jpg" alt="Zdjęcie z Filip"></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; Krakus. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

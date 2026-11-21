@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krakus</title>
+    <link rel="stylesheet" href="moje_style.css">
+    <link rel="icon" href="last2.png" type="image/x-icon">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('nav a');
+
+            links.forEach(link => {
+                const underline = document.createElement('span');
+                link.appendChild(underline); 
+
+                link.addEventListener('mouseover', () => {
+                    underline.style.width = '100%';  
+                });
+
+                link.addEventListener('mouseout', () => {
+                    underline.style.width = '0';  
+                });
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#showForm').on('click', function() {
+                $('.form-container').fadeIn(500); 
+            });
+        });
+    </script>
+  	
+  	<script>
+  	document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('submitFormBtn').addEventListener('click', (event) => {
+        let isValid = true;
+
+        const fullName = document.getElementById('ImieNazwisko').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const telefon = document.getElementById('telefon').value.trim();
+
+        if (fullName === '' || !/^[A-Za-z\s]+$/.test(fullName)) {
+            alert("Imię i nazwisko musi być podane i zawierać tylko litery.");
+            isValid = false;
+            return;
+        }
+
+        if (email === '' || !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+            alert("Podaj prawidłowy adres e-mail.");
+            isValid = false;
+            return;
+        }
+
+        if (telefon === '' || !/^\d{9}$/.test(telefon)) {
+            alert("Numer telefonu musi zawierać 9 cyfr.");
+            isValid = false;
+            return;
+        }
+
+        if (!isValid) {
+            event.preventDefault(); 
+        }
+    });
+});
+
+  	</script>
+    
+</head>
+<body>
+    <header>
+    	<img src="last2.png" style="width: 10%; height: auto; margin: 0; padding: 0;" alt="Opis obrazka">
+    <h1 style="margin: 0; padding: 0;">Krakus</h1>
+    </header>
+
+    <nav>
+        <a href="onas.html">O nas</a>
+        <a href="rekrutacja.html" class="aktywna">Rekrutacja</a>
+        <a href="wyjazdy.html">Wyjazdy zagraniczne</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <main>
+        <section class="content">
+            <h2>Dołącz do Nas!</h2>
+            <p>Zespół Pieśni i Tańca Krakus to jeden z najstarszych studenckich zespołów ludowych w Polsce, który łączy pasję do tradycji, muzyki i tańca. Jeśli lubisz śpiewać, tańczyć lub grać na instrumencie, zapraszamy Cię do dołączenia do naszej wyjątkowej grupy!</p>
+        </section>
+        
+		<img src="koncert1.jpg" alt="Zdjęcie zespołu"">
+		
+        <section class="content">
+            <h2>Nasze Sekcje</h2>
+            <ul>
+                <li><strong>Balet</strong> – dla osób, które kochają tańczyć. Sekcja ta wykonuje tradycyjne polskie tańce ludowe, prezentowane w pięknych strojach ludowych.</li>
+                <li><strong>Chór</strong> – dla osób, które oprócz tańca, chcą rozwijać swoje umiejętności wokalne. Chór Krakusa wykonuje pieśni ludowe, zarówno w połączeniu z tańcem, jak i osobno.</li>
+                <li><strong>Kapela</strong> – dla muzyków, którzy potrafią grać na tradycyjnych instrumentach. Do sekcji kapeli można dołączyć, jeśli masz doświadczenie w grze na instrumencie i chcesz wspierać muzycznie występy Zespołu.</li>
+            </ul>
+        </section>
+        
+		<img src="dzieci.jpg" alt="Zdjęcie zespołu"">
+		
+        <section class="content">
+            <h2>Sekcja Dziecięca</h2>
+            <p>Krakus oferuje również miejsce dla dzieci w wieku szkolnym (zarówno z podstawówki, jak i szkoły średniej). Dzieci w tej sekcji rozwijają swoje talenty taneczne, wokalne i muzyczne, biorąc udział w licznych występach w kraju i za granicą.</p>
+        </section>
+        
+		<img src="meskie1.JPEG" alt="Zdjęcie zespołu"">
+		
+        <section class="content">
+            <h2>Rekrutacja</h2>
+            <p>Zapisy do Zespołu odbywają się za pomocą formularza zgłoszeniowego. Jeśli jesteś zainteresowany/a dołączeniem do Krakusa, wypełnij formularz, a my skontaktujemy się z Tobą w sprawie dalszych szczegółów rekrutacji.</p>
+        	<button id="showForm" class="submit-btn">Pokaż formularz</button>
+        </section>
+        
+        <section class="form-container" style="display: none;">
+        <h2 style="color: #447055;">Wypełnij formularz rekrutacyjny</h2>
+            <p>Zapraszamy do zapisów! Prosimy o podanie niezbędnych danych oraz wybranie sekcji, do której chcesz dołączyć.</p>
+            
+            <form action="/submit-form" method="POST">
+                <label for="fullName">Imię i Nazwisko</label>
+                <input type="text" id="ImieNazwisko" name="ImieNazwisko" required placeholder="Wpisz swoje imię i nazwisko">
+
+                <label for="email">Adres e-mail</label>
+                <input type="email" id="email" name="email" required placeholder="Wpisz swój adres e-mail">
+
+                <label for="telefon">Numer telefonu</label>
+                <input type="tel" id="telefon" name="telefon" required placeholder="Wpisz numer telefonu">
+
+                <label for="sekcja">Wybierz sekcję</label>
+                <select id="sekcja" name="sekcja" required>
+                    <option value="balet">Balet (Taniec)</option>
+                    <option value="chor">Chór (Śpiew i Taniec)</option>
+                    <option value="kapela">Kapela (Instrumenty)</option>
+                    <option value="dzieci">Sekcja Dziecięca</option>
+                </select>
+
+                <label for="doswiadczenie">Doświadczenie w tańcu/śpiewie/instrumentach (opcjonalnie)</label>
+                <textarea id="doswiadczenie" name="doswiadczenie" placeholder="Opisz swoje doświadczenie w tańcu, śpiewie lub grze na instrumencie, jeśli dotyczy."></textarea>
+
+                <label for="komentarz">Dodatkowe uwagi (opcjonalnie)</label>
+                <textarea id="komentarz" name="komentarz" placeholder="Napisz, jeśli masz dodatkowe pytania lub uwagi."></textarea>
+
+                <button id="submitFormBtn" type="submit" class="submit-btn">Zapisz się</button>
+            </form>
+        </section>
+        <img src="ja.jpg" alt="Zdjęcie zespołu">
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; Krakus. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
